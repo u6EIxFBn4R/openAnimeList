@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>openAnimeList</title>
+<style>
+a {
+    color: inherit;
+    text-decoration: none;
+}
+body {
+    background-color: #0B1622;
+    color: #9FADBD;
+    font-family: "segoe ui", sans-serif;
+}
+caption {
+    font-size: 1.17em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    margin-left: 1.5em;
+    text-align: left;
+}
+table {
+    background-color: #151F2E;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+td, th {
+    text-align: center;
+    padding: 1em;
+}
+td:first-child, th:first-child {
+    text-align: left;
+    width: 60%;
+}
+#main {margin-left: 225px;}
+#main tr:not(:first-child):hover {
+    background-color: #3DB4F2;
+    color: #EDF1F5;
+}
+#sidebar {
+    margin-top: 3.45em;
+    position: fixed;
+}
+#sidebar table {
+    background-color: transparent;
+    width: 185px;
+}
+#sidebar td, #sidebar th {
+    font-weight: normal;
+    padding: 0.45em;
+}
+#sidebar td:nth-child(2) {text-align: right}
+#sidebar th {font-size: 0.83em;}
+#wrapper {
+    margin: auto;
+    max-width: 1325px;
+    min-width: 800px;
+    width: 100%;
+}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+<div id="sidebar">
+<table>
+    <tr>
+        <th>Lists</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><a href="#top">All</a></td>
+        <td id="totalNumber"></td>
+    </tr>
+    <tr>
+        <td><a href="#watching">Watching</a></td>
+        <td id="watchingNumber"></td>
+    </tr>
+    <tr>
+        <td><a href="#completed">Completed</a></td>
+        <td id="completedNumber"></td>
+    </tr>
+    <tr>
+        <td><a href="#paused">Paused</a></td>
+        <td id="pausedNumber"></td>
+    </tr>
+    <tr>
+        <td><a href="#planning">Planning</a></td>
+        <td id="planningNumber"></td>
+    </tr>
+    <tr>
+        <td><a href="#dropped">Dropped</a></td>
+        <td id="droppedNumber"></td>
+    </tr>
+</table>
+</div>
+
+<div id="main">
+<table id="watching">
+    <caption>Watching</caption>
+    <tr>
+        <th>Title</th>
+        <th>Score</th>
+        <th>Progress</th>
+        <th>Type</th>
+    </tr>
+    <tr>
+        <td><a href="https://anilist.co/anime/237">Eureka Seven</a></td>
+        <td></td>
+        <td>0/50</td>
+        <td>TV</td>
+    </tr>
+    <tr>
+        <td><a href="https://anilist.co/anime/820">Ginga Eiyuu Densetsu</a></td>
+        <td>10</td>
+        <td>64/110</td>
+        <td>OVA</td>
+    </tr>
+    <tr>
+        <td><a href="https://anilist.co/anime/101386">Hitoribocchi no Marumaru Seikatsu</a></td>
+        <td>10</td>
+        <td>7/12</td>
+        <td>TV</td>
+    </tr>
+    <tr>
+        <td><a href="https://anilist.co/anime/98866">Yama no Susume 3</a></td>
+        <td>10</td>
+        <td>3/13</td>
+        <td>TV Short</td>
+    </tr>
+</table>
+
+<table id="completed">
+    <caption>Completed</caption>
+    <tr>
+        <th>Title</th>
+        <th>Score</th>
+        <th>Progress</th>
+        <th>Type</th>
+    </tr>
+    <tr>
+        <td><a href="https://anilist.co/anime/103572">Gotoubun no Hanayome</a></td>
+        <td>10</td>
+        <td>12</td>
+        <td>TV</td>
+    </tr>
+    <tr>
+        <td><a href="https://anilist.co/anime/20517">Is the order a rabbit?</a></td>
+        <td>10</td>
+        <td>12</td>
+        <td>TV</td>
+    </tr>
+    <tr>
+        <td><a href="https://anilist.co/anime/18897">Nisekoi</a></td>
+        <td>10</td>
+        <td>20</td>
+        <td>TV</td>
+    </tr>
+    <tr>
+        <td><a href="https://anilist.co/anime/24">School Rumble</a></td>
+        <td></td>
+        <td>26</td>
+        <td>TV</td>
+    </tr>
+    <tr>
+        <td><a href="https://anilist.co/anime/14355">Yama no Susume</a></td>
+        <td>10</td>
+        <td>12</td>
+        <td>TV Short</td>
+    </tr>
+    <tr>
+        <td><a href="https://anilist.co/anime/20485">Yama no Susume 2</a></td>
+        <td>10</td>
+        <td>24</td>
+        <td>TV Short</td>
+    </tr>
+    <tr>
+        <td><a href="https://anilist.co/anime/103813">Yugami-kun wa Tomodachi ga Inai</a></td>
+        <td>10</td>
+        <td>2</td>
+        <td>ONA</td>
+    </tr>
+</table>
+
+<table id="paused">
+    <caption>Paused</caption>
+    <tr>
+        <th>Title</th>
+        <th>Score</th>
+        <th>Progress</th>
+        <th>Type</th>
+    </tr>
+    <tr>
+        <td><a href="https://anilist.co/anime/20876">Nisekoi:</a></td>
+        <td></td>
+        <td>3/12</td>
+        <td>TV</td>
+    </tr>
+    <tr>
+        <td><a href="https://anilist.co/anime/21355">Re:Zero kara Hajimeru Isekai Seikatsu</a></td>
+        <td></td>
+        <td>1/25</td>
+        <td>TV</td>
+    </tr>
+</table>
+
+<table id="planning">
+    <caption>Planning</caption>
+    <tr>
+        <th>Title</th>
+        <th>Score</th>
+        <th>Progress</th>
+        <th>Type</th>
+    </tr>
+    <tr>
+        <td><a href="https://anilist.co/anime/8425">Gosick</a></td>
+        <td></td>
+        <td>0/24</td>
+        <td>TV</td>
+    </tr>
+    <tr>
+        <td><a href="https://anilist.co/anime/1852">Hidamari Sketch</a></td>
+        <td></td>
+        <td>0/12</td>
+        <td>TV</td>
+    </tr>
+    <tr>
+        <td><a href="https://anilist.co/anime/21034">Is the order a rabbit??</a></td>
+        <td>10</td>
+        <td>0/12</td>
+        <td>TV</td>
+    </tr>
+    <tr>
+        <td><a href="https://anilist.co/anime/16732">Kin'iro Mosaic</a></td>
+        <td></td>
+        <td>0/12</td>
+        <td>TV</td>
+    </tr>
+    <tr>
+        <td><a href="https://anilist.co/anime/17549">Non Non Biyori</a></td>
+        <td></td>
+        <td>0/12</td>
+        <td>TV</td>
+    </tr>
+</table>
+
+<table id="dropped">
+    <caption>Dropped</caption>
+    <tr>
+        <th>Title</th>
+        <th>Score</th>
+        <th>Progress</th>
+        <th>Type</th>
+    </tr>
+    <tr>
+        <td><a href="https://anilist.co/anime/30">Neon Genesis Evangelion</a></td>
+        <td></td>
+        <td>21/26</td>
+        <td>TV</td>
+    </tr>
+</table>
+</div>
+</div>
+
+<script>
+function getNumberOfRows(tableId) {
+    return document.getElementById(tableId).rows.length - 1;
+}
+wa = getNumberOfRows("watching");
+co = getNumberOfRows("completed");
+pa = getNumberOfRows("paused");
+pl = getNumberOfRows("planning");
+dr = getNumberOfRows("dropped");
+document.getElementById("watchingNumber").innerHTML = wa;
+document.getElementById("completedNumber").innerHTML = co;
+document.getElementById("pausedNumber").innerHTML = pa;
+document.getElementById("planningNumber").innerHTML = pl;
+document.getElementById("droppedNumber").innerHTML = dr;
+document.getElementById("totalNumber").innerHTML = wa+co+pa+pl+dr;
+</script>
+
+</body>
+</html>
