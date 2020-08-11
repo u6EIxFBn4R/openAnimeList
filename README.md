@@ -11,7 +11,7 @@ favorite anime with openAnimeList. Free, functional, and secure.
 * Audited by CERN scientists in a bunker beneath 100 meters of Swiss granite
 # Instructions 
 1. Backup
-2. Edit 'openanimelist.html`
+2. Edit `openanimelist.html`
 3. Backup  
   
 An electron-based app is in development to simplify this process.
