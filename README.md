@@ -12,7 +12,7 @@ favorite anime with openAnimeList. Free, functional, and secure.
 # Instructions 
 1. Backup
 2. Edit 'openanimelist.html`
-3. Backup
+3. Backup  
 An electron-based app is in development to simplify this process.
 # Code of conduct
 Soydevs will be sent to gnulag. Video games are the 
